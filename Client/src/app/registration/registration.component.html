@@ -5,14 +5,14 @@
   <tr>
     <th>Make</th>
     <th>Model</th>
-    <th>Is Registration Expired</th>
+    <th>Registration Status</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let car of cars">
     <td>{{ car.make }}</td>
     <td>{{ car.model }}</td>
-    <td>{{ car.isRegistrationExpired ? 'Yes' : 'No' }}</td>
+    <td>{{ car.isRegistrationExpired ? 'Expired' : 'Valid' }}</td>
   </tr>
   </tbody>
 </table>
