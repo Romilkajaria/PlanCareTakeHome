@@ -44,7 +44,7 @@ public class CarsController : ControllerBase
 
                 if (!response.Any())
                 {
-                    return BadRequest(new { Message = "No cars found for the specified make." });
+                    return BadRequest(new { Message = $"No cars found for the specified make: {make}" });
                 }
 
                 return Ok(response);
