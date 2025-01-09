@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanCareTakeHome", "PlanCareTakeHome\PlanCareTakeHome.csproj", "{E1477A86-5087-49B8-AD1F-9D6D77D00804}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanCareTakeHome.Test", "PlanCareTakeHome.Test\PlanCareTakeHome.Test.csproj", "{07ADE9EF-6593-4EB1-80A9-5E4602D3095D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E1477A86-5087-49B8-AD1F-9D6D77D00804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1477A86-5087-49B8-AD1F-9D6D77D00804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1477A86-5087-49B8-AD1F-9D6D77D00804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07ADE9EF-6593-4EB1-80A9-5E4602D3095D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07ADE9EF-6593-4EB1-80A9-5E4602D3095D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07ADE9EF-6593-4EB1-80A9-5E4602D3095D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07ADE9EF-6593-4EB1-80A9-5E4602D3095D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

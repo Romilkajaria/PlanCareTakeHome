@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanCareTakeHome")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afc64ddb8b5e44776bdfa9e039dafd2da0eff6ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f83e0d43fb76ef8b0028b657f2377d6b4c547ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanCareTakeHome")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanCareTakeHome")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
