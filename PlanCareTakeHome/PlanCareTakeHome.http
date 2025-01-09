@@ -1,0 +1,7 @@
+﻿@PlanCareTakeHome_HostAddress = http://localhost:5094
+
+GET {{PlanCareTakeHome_HostAddress}}/car/
+Accept: application/json
+
+###
+
