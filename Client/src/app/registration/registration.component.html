@@ -1,0 +1,18 @@
+<h1>Registration</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Is Registration Expired</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let car of cars">
+    <td>{{ car.make }}</td>
+    <td>{{ car.model }}</td>
+    <td>{{ car.isRegistrationExpired ? 'Yes' : 'No' }}</td>
+  </tr>
+  </tbody>
+</table>

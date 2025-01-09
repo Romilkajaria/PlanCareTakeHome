@@ -1,0 +1,19 @@
+<h1 class="h1">Cars</h1>
+<input type="text" [(ngModel)]="make"/>
+<button [textContent]="'Search'" (click)="getCars()" ></button>
+<button class="reset" [textContent]="'Reset'" (click)="reset()" ></button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{car.make}}</td>
+      <td>{{car.model}}</td>
+    </tr>
+  </tbody>
+</table>

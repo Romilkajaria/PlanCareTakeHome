@@ -30,3 +30,4 @@
 /Users/user/Projects/PlanCareTakeHome/PlanCareTakeHome/obj/Debug/net8.0/PlanCareTakeHome.pdb
 /Users/user/Projects/PlanCareTakeHome/PlanCareTakeHome/obj/Debug/net8.0/PlanCareTakeHome.genruntimeconfig.cache
 /Users/user/Projects/PlanCareTakeHome/PlanCareTakeHome/obj/Debug/net8.0/ref/PlanCareTakeHome.dll
+/Users/user/Projects/PlanCareTakeHome/PlanCareTakeHome/obj/Debug/net8.0/PlanCareTakeHome.sourcelink.json
