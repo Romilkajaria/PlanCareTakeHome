@@ -33,5 +33,4 @@ export class CarsComponent implements OnInit{
     this.make = undefined;
     this.getCars();
   }
-
 }
