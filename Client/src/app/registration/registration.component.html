@@ -1,6 +1,8 @@
 <h1>Registration</h1>
 
-<table>
+<p *ngIf="loading">Loading...</p>
+
+<table *ngIf="!loading">
   <thead>
   <tr>
     <th>Make</th>
@@ -16,3 +18,4 @@
   </tr>
   </tbody>
 </table>
+

@@ -1,12 +1,13 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {SignalRService} from '../signalr/signalr.service';
 import {CarRegistration} from '../models/car';
-import {NgForOf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-registration',
   imports: [
-    NgForOf
+    NgForOf,
+    NgIf,
   ],
   standalone: true,
   templateUrl: './registration.component.html',
@@ -14,6 +15,7 @@ import {NgForOf} from '@angular/common';
 })
 export class RegistrationComponent implements OnInit, OnDestroy {
   public cars: CarRegistration[] = [];
+  public loading = true
 
   constructor(private signalRService: SignalRService<CarRegistration>) {}
 
@@ -21,6 +23,7 @@ export class RegistrationComponent implements OnInit, OnDestroy {
     this.signalRService.connect(`/notificationHub`, 'ReceiveMessage');
     this.signalRService.data$.subscribe(data => {
       this.cars = data as CarRegistration[];
+      this.loading = this.cars.length === 0;
     });
   }
 

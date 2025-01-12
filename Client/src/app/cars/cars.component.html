@@ -1,9 +1,11 @@
 <h1 class="h1">Cars</h1>
-<input type="text" [(ngModel)]="make"/>
-<button [textContent]="'Search'" (click)="getCars()" ></button>
-<button class="reset" [textContent]="'Reset'" (click)="reset()" ></button>
+<input [disabled]="loading" type="text" [(ngModel)]="make"/>
+<button [textContent]="'Search'" [disabled]="loading" (click)="getCars()" ></button>
+<button class="reset" [textContent]="'Reset'" [disabled]="loading" (click)="reset()" ></button>
 
-<table>
+<p *ngIf="loading">Loading...</p>
+
+<table *ngIf="!loading">
   <thead>
     <tr>
       <th>Make</th>
