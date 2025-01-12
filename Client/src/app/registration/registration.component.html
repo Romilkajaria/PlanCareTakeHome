@@ -1,5 +1,7 @@
 <h1>Registration</h1>
 
+<p *ngIf="errorMessage">ERROR: {{errorMessage}}</p>
+
 <p *ngIf="loading">Loading...</p>
 
 <table *ngIf="!loading">

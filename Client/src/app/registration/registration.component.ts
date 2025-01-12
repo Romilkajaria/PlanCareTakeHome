@@ -15,15 +15,22 @@ import {NgForOf, NgIf} from '@angular/common';
 })
 export class RegistrationComponent implements OnInit, OnDestroy {
   public cars: CarRegistration[] = [];
-  public loading = true
+  public loading = true;
+  public errorMessage?: string;
 
   constructor(private signalRService: SignalRService<CarRegistration>) {}
 
   ngOnInit(): void {
     this.signalRService.connect(`/notificationHub`, 'ReceiveMessage');
-    this.signalRService.data$.subscribe(data => {
-      this.cars = data as CarRegistration[];
-      this.loading = this.cars.length === 0;
+    this.signalRService.data$.subscribe({
+      next: (data) => {
+        this.cars = data as CarRegistration[];
+        this.loading = this.cars.length === 0;
+      },
+      error: (err) => {
+        this.errorMessage = err.error.message;
+        this.loading = false;
+      }
     });
   }
 

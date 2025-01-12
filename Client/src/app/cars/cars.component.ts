@@ -18,8 +18,10 @@ import {FormsModule} from '@angular/forms';
 })
 export class CarsComponent implements OnInit{
   public cars?: Car[];
-  make: string | undefined;
-  public loading = true
+  public make: string | undefined;
+  public loading = true;
+  public errorMessage?: string;
+
   constructor(private apiService: ApiService) {
   }
 
@@ -29,14 +31,23 @@ export class CarsComponent implements OnInit{
 
   public getCars() {
     this.loading = true;
-    this.apiService.getCars(this.make).subscribe((cars) => {
-      this.cars = cars;
-      this.loading = false
+    this.apiService.getCars(this.make).subscribe( {
+      next: (cars) => {
+        this.cars = cars;
+        this.loading = false
+      },
+      error: (err) => {
+        this.errorMessage = err.error.message
+        this.loading = false;
+        // dont show any cars if it errors out;
+        this.cars = [];
+      }
     });
   }
 
   public reset() {
     this.make = undefined;
+    this.errorMessage = undefined;
     this.getCars();
   }
 }
