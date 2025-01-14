@@ -40,7 +40,7 @@ export class CarsComponent implements OnInit{
         this.errorMessage = err.error.message
         this.loading = false;
         // dont show any cars if it errors out;
-        this.cars = [];
+        this.cars = undefined;
       }
     });
   }

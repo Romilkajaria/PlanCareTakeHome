@@ -2,7 +2,7 @@
 
 <p *ngIf="errorMessage">ERROR: {{errorMessage}}</p>
 
-<input [disabled]="loading" type="text" [(ngModel)]="make"/>
+<input [disabled]="loading" type="text" [(ngModel)]="make" placeholder="Make"/>
 <button [textContent]="'Search'" [disabled]="loading" (click)="getCars()" ></button>
 <button class="reset" [textContent]="'Reset'" [disabled]="loading" (click)="reset()" ></button>
 
@@ -21,7 +21,7 @@
       <td>{{car.model}}</td>
     </tr>
   </tbody>
-  <tbody *ngIf="cars">
+  <tbody *ngIf="!cars">
     <tr>no cars found</tr>
   </tbody>
 </table>
